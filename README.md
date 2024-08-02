@@ -1,11 +1,18 @@
-# FitHub
+<div align="center">
+    <h1 id="Header">FitHub</h1>
+</div>
 
 FitHub is a fitness management website where users can explore targeted workout plans for specific body areas, create personal accounts, log in, register, and design their weekly workout routines.
 
-## Homepage
+<div align="center">
+    <h1 id="Header">Homepage</h1>
+</div>
+
 [Homepage Link] (http://ec2-18-117-107-39.us-east-2.compute.amazonaws.com/~Gokuf/M7/orig-fithub/client/public/login.php)
 
-## Login Details
+<div align="center">
+    <h1 id="Header">Login Details</h1>
+</div>
 
 When you navigate to the home page, use the following login credentials.
 
@@ -15,12 +22,17 @@ When you navigate to the home page, use the following login credentials.
 
 Or you can create your own user by simply typing the username and password, then clicking on Register. Or you can Continue as Guest, but you won't have access to 'Build your plan' and 'Challenge' features.
 
-## Technologies/Frameworks Used:
+<div align="center">
+    <h1 id="Header">Technologies/Frameworks Used:</h1>
+</div>
+
 - HTML/CSS & JavaScript for front-end
 - PHP for backend
 - MongoDB for database
 
-## MongoDB Setup
+<div align="center">
+    <h1 id="Header">MongoDB Setup</h1>
+</div>
 
 In order to set up MongoDB to be used for this project (assuming steps for conifugring PHP and Apache are followed from CS330 Wiki, as well as the instance being used is Amazon Linux 2023), one must run the following set of commands:
 ```bash
@@ -56,7 +68,9 @@ composer update
 
 ```
 
-## Features
+<div align="center">
+    <h1 id="Header">Features</h1>
+</div>
 
 ### Feature #1: Building Plans
 The another creative feature we implemented was sharing workout plans with other users which can be found in `plan.php`. This functionality basically copies all the selected workout plans from one user to another. The basics steps are:
