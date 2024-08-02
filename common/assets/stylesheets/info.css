@@ -1,0 +1,150 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background {
+  background: url("http://ec2-50-17-104-237.compute-1.amazonaws.com/~kananAhmadov/final-project/common/assets/pics/login-page-background.jpeg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.info-text {
+  flex: 1;
+  max-width: 600px; /* Set a max-width for better alignment */
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: justify;
+  font-family: 'Playfair Display', serif; /* Fancy font */
+  margin-right: 200px;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 400px; /* Set max-width for the image container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vitruvian-image {
+  width: 120%;
+  max-width: 120%; /* Ensure the image does not exceed the container's max-width */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Center the container horizontally */
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: none; /* Remove max-width for smaller screens */
+  }
+
+  .image-container {
+    width: 100%;
+    justify-content: center;
+    max-width: none; /* Remove max-width for smaller screens */
+  }
+
+  .vitruvian-image {
+    width: 100%;
+    max-width: none; /* Ensure the image takes full width on smaller screens */
+  }
+}
+
+.welcome-message {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  color: rgb(173, 154, 7);
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

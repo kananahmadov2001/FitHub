@@ -1,0 +1,220 @@
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.dialog-box {
+  display: none;
+}
+
+.background {
+  background: url('../pics/login-page-background.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding-top: 80px; /* Add padding to prevent content from being hidden behind the header */
+}
+
+header {
+  position: fixed; /* Make header fixed */
+  top: 0; /* Stick to the top */
+  left: 0;
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px; /* Adjust padding */
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7); /* Add background color for better visibility */
+  z-index: 1000; /* Ensure it is above other elements */
+}
+
+.gray-box {
+  background: url('../pics/dumbbell.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+.gray-box button {
+  margin: 2px;
+  padding: 2px;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.delete-btn {
+  background-color: blue;
+  color: white;
+  font-size: 10px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.logout-text {
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  background: rgba(173, 154, 7, 0.8);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.logout-text:hover {
+  background: rgba(173, 154, 7, 1);
+}
+
+.welcome-message {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  color: rgb(173, 154, 7);
+}
+
+.content-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1250px;
+  height: fit-content;
+  /* margin-bottom: 20px; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* margin-top: 20px; Move content-box down */
+  position: relative;
+   top: 50px; /* Move content-box down */
+}
+
+.dialog-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: auto;
+  /* max-width: 1250px; */
+  height: auto;
+  /* max-height: 400px; */
+  /* margin-bottom: 20px; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* margin-top: 20px; Move content-box down */
+  position: relative;
+   bottom: -80px; /* Move content-box down */
+}
+
+tr, th {
+  text-align: center;
+  width: 50px;
+  height: 80px;
+}
+
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.plan-table th, .plan-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.plan-table th {
+  background-color: black; /* Change header background to black */
+  color: white; /* Change header text to white */
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.submit-btn, .share-btn, .edit-btn, .e-submit-btn, .clear-btn, .add-btn, .close-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.share-btn {
+  background-color: blue;
+  color: white;
+}
+
+.share-btn:hover {
+  background-color: rgb(9, 9, 131);
+}
+
+.submit-btn, .e-submit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.submit-btn:hover, .e-submit-btn:hover {
+  background-color: #218838;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* color: black; */
+}
+.clear-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.clear-btn:hover {
+  background-color: #c82333;
+}
+
+.add-btn, .edit-btn {
+  background-color: #14d163;
+  color: white;
+  z-index: 2000; /* Ensure it is above other elements */
+}
+
+.add-btn:hover, .edit-btn:hover {
+  background-color: #0d843f;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,252 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background {
+  background: url("http://ec2-50-17-104-237.compute-1.amazonaws.com/~kananAhmadov/final-project/common/assets/pics/login-page-background.jpeg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 0.5s;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 1s;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.challenge-title {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  color: rgb(173, 154, 7);
+  margin: 20px 0;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 1.5s;
+}
+
+.challenge-rules {
+  background-color: rgb(173, 154, 7);
+  color: #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  max-width: 800px;
+  text-align: left;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 2s;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 2.5s;
+}
+
+label {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 3s;
+}
+
+select, input {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 3.5s;
+}
+
+.submit-btn, .reset-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 4s;
+}
+
+.submit-btn {
+  background-color: rgb(173, 154, 7);
+}
+
+.submit-btn:hover {
+  background-color: #e0a800;
+}
+
+.reset-btn {
+  background-color: rgb(173, 154, 7);
+}
+
+.reset-btn:hover {
+  background-color: #e0a800;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 4.5s;
+}
+
+.start, .finish {
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 5s;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 5.5s;
+}
+
+.progress-indicator {
+  height: 100%;
+  background-color: #007bff;
+  width: 0; /* Initially at 0% */
+  border-radius: 10px 0 0 10px;
+  transition: width 0.5s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 6s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.congratulations-message {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 255, 4, 0.8);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 1s forwards, pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 255, 13);
+    animation: fall 3s linear infinite;
+}
+
+.total-hours {
+  margin-left: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  color: rgb(0, 255, 13);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
