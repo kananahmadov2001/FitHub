@@ -5,13 +5,13 @@
 FitHub is a fitness management website where users can explore targeted workout plans for specific body areas, create personal accounts, log in, register, and design their weekly workout routines.
 
 <div align="center">
-    <h1 id="Header">Homepage</h1>
+    <h2 id="Header">Homepage</h2>
 </div>
 
 [Homepage Link] (http://ec2-18-117-107-39.us-east-2.compute.amazonaws.com/~Gokuf/M7/orig-fithub/client/public/login.php)
 
 <div align="center">
-    <h1 id="Header">Login Details</h1>
+    <h2 id="Header">Login Details</h2>
 </div>
 
 When you navigate to the home page, use the following login credentials.
@@ -23,7 +23,7 @@ When you navigate to the home page, use the following login credentials.
 Or you can create your own user by simply typing the username and password, then clicking on Register. Or you can Continue as Guest, but you won't have access to 'Build your plan' and 'Challenge' features.
 
 <div align="center">
-    <h1 id="Header">Technologies/Frameworks Used:</h1>
+    <h2 id="Header">Technologies/Frameworks Used:</h2>
 </div>
 
 - HTML/CSS & JavaScript for front-end
@@ -31,7 +31,7 @@ Or you can create your own user by simply typing the username and password, then
 - MongoDB for database
 
 <div align="center">
-    <h1 id="Header">MongoDB Setup</h1>
+    <h2 id="Header">MongoDB Setup</h2>
 </div>
 
 In order to set up MongoDB to be used for this project (assuming steps for conifugring PHP and Apache are followed from CS330 Wiki, as well as the instance being used is Amazon Linux 2023), one must run the following set of commands:
@@ -69,7 +69,7 @@ composer update
 ```
 
 <div align="center">
-    <h1 id="Header">Features</h1>
+    <h2 id="Header">Features</h2>
 </div>
 
 ### Feature #1: Building Plans
