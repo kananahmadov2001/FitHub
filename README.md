@@ -76,10 +76,10 @@ composer update
 ```
 
 <div align="center">
-    <h2 id="Header">Features</h2>
+    <h2 id="Header">Current Additional Features</h2>
 </div>
 
-### Creative Feature: Challenge Activity
+### Challenge Activity
 "Challenge" feature allows users to track their fitness activities and progress in a gamified manner. Users can select different workout types, specify the duration of each workout, and accumulate points based on their activities. The goal is to reach a specified number of points (60 points in this case), encouraging users to stay active. For this feature, I utilized a combination of PHP for backend processing and JavaScript for dynamic frontend updates. I also used sessions for tracking progress, AJAX for seamless updates, and visual feedback through a progress bar and congratulatory messages and effects enhances the user experience, making it both interactive and motivating. 
 
 Here is the more in-depth analysis of 'Challenge' feature and steps in the `challenge.php`:
