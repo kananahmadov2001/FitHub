@@ -2,7 +2,9 @@
     <h1 id="Header">FitHub</h1>
 </div>
 
-FitHub is a fitness management website where users can explore targeted workout plans for specific body areas, create personal accounts, log in, register, design and share their weekly workout routines. Designing and sharing workout plans with other users can be found in `plan.php`. This functionality basically copies all the selected workout plans from one user to another. The basics steps are:
+FitHub is a fitness management website where users can explore targeted workout plans for specific body areas, create personal accounts, log in, register, design and share their weekly workout routines. 
+
+Designing and sharing workout plans with other users can be found in `plan.php`. This functionality basically copies all the selected workout plans from one user to another. The basics steps are:
 * Form Handling: When a POST request is made with the action set to 'share', the script processes the request to share the current user's workout plans with another user.
 * Fetching the Target User: The target user, referred to as sharedWith, is retrieved from the incoming request data ($input['shared_with']).
 * Deleting Existing Plans: Before sharing the plans, the script deletes any existing plans that the target user ($sharedWith) might have.
