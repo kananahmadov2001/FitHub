@@ -96,9 +96,9 @@ Here is the more in-depth analysis of 'Challenge' feature and steps in the `chal
 </div>
 
 <p align="center" width="100%">
-    <img width="50%" src="https://github.com/user-attachments/assets/7b77a02a-0f3c-4900-82ee-41bac5f112d7"> 
-    <img width="50%" src="https://github.com/user-attachments/assets/6f06097a-e458-4494-8af4-69a52bad0c95"> 
-    <img width="50%" src="https://github.com/user-attachments/assets/164e83a5-d19a-4e75-8e1c-66550b31e860"> 
-    <img width="50%" src="https://github.com/user-attachments/assets/1bc00b78-3050-4329-a1c2-cfdf5b6553ab"> 
-    <img width="50%" src="https://github.com/user-attachments/assets/a0e9d5a4-c1d9-4023-a12b-6d2a87a79eb9"> 
+    <img width="50%" src="https://github.com/user-attachments/assets/7b77a02a-0f3c-4900-82ee-41bac5f112d7"> <br>
+    <img width="50%" src="https://github.com/user-attachments/assets/6f06097a-e458-4494-8af4-69a52bad0c95"> <br>
+    <img width="50%" src="https://github.com/user-attachments/assets/164e83a5-d19a-4e75-8e1c-66550b31e860"> <br>
+    <img width="50%" src="https://github.com/user-attachments/assets/1bc00b78-3050-4329-a1c2-cfdf5b6553ab"> <br>
+    <img width="50%" src="https://github.com/user-attachments/assets/a0e9d5a4-c1d9-4023-a12b-6d2a87a79eb9"> <br>
 </p>
