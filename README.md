@@ -2,7 +2,12 @@
     <h1 id="Header">FitHub</h1>
 </div>
 
-FitHub is a fitness management website where users can explore targeted workout plans for specific body areas, create personal accounts, log in, register, and design their weekly workout routines.
+FitHub is a fitness management website where users can explore targeted workout plans for specific body areas, create personal accounts, log in, register, design and share their weekly workout routines. Designing and sharing workout plans with other users can be found in `plan.php`. This functionality basically copies all the selected workout plans from one user to another. The basics steps are:
+* Form Handling: When a POST request is made with the action set to 'share', the script processes the request to share the current user's workout plans with another user.
+* Fetching the Target User: The target user, referred to as sharedWith, is retrieved from the incoming request data ($input['shared_with']).
+* Deleting Existing Plans: Before sharing the plans, the script deletes any existing plans that the target user ($sharedWith) might have.
+* Copying Plans to the Target User: The script then retrieves all workout plans belonging to the current user ($userId). It iterates over each plan and inserts a new document into the collection with the username field set to the target user's username ($sharedWith).
+
 
 <div align="center">
     <h2 id="Header">Homepage</h2>
@@ -72,14 +77,7 @@ composer update
     <h2 id="Header">Features</h2>
 </div>
 
-### Feature #1: Building Plans
-The another creative feature we implemented was sharing workout plans with other users which can be found in `plan.php`. This functionality basically copies all the selected workout plans from one user to another. The basics steps are:
-Form Handling: When a POST request is made with the action set to 'share', the script processes the request to share the current user's workout plans with another user.
-* Fetching the Target User: The target user, referred to as sharedWith, is retrieved from the incoming request data ($input['shared_with']).
-* Deleting Existing Plans: Before sharing the plans, the script deletes any existing plans that the target user ($sharedWith) might have.
-* Copying Plans to the Target User: The script then retrieves all workout plans belonging to the current user ($userId). It iterates over each plan and inserts a new document into the collection with the username field set to the target user's username ($sharedWith).
-
-### Feature #2: Challenge Activity
+### Creative Feature: Challenge Activity
 "Challenge" feature allows users to track their fitness activities and progress in a gamified manner. Users can select different workout types, specify the duration of each workout, and accumulate points based on their activities. The goal is to reach a specified number of points (60 points in this case), encouraging users to stay active. For this feature, I utilized a combination of PHP for backend processing and JavaScript for dynamic frontend updates. I also used sessions for tracking progress, AJAX for seamless updates, and visual feedback through a progress bar and congratulatory messages and effects enhances the user experience, making it both interactive and motivating. 
 
 Here is the more in-depth analysis of 'Challenge' feature and steps in the `challenge.php`:
@@ -90,3 +88,15 @@ Here is the more in-depth analysis of 'Challenge' feature and steps in the `chal
 * Progress Bar and Points Display: displaying the user's progress and total points. The progress bar visually represents the percentage of the goal achieved.
 * JavaScript for Dynamic Updates: updating the progress and points display, and showing the congratulatory message. The fetch API is used for AJAX requests, ensuring the page does not reload upon submission or reset.
 * Confetti Effect: implemented using JavaScript and CSS. It involves dynamically creating and animating confetti elements on the screen when the user reaches the target points.
+
+<div align="center">
+    <h2 id="Header">Page Visuals</h2>
+</div>
+
+<p align="center" width="100%">
+    <img width="40.5%" src="https://github.com/user-attachments/assets/7b77a02a-0f3c-4900-82ee-41bac5f112d7"> 
+    <img width="39.2%" src="https://github.com/user-attachments/assets/6f06097a-e458-4494-8af4-69a52bad0c95"> 
+    <img width="40.5%" src="https://github.com/user-attachments/assets/164e83a5-d19a-4e75-8e1c-66550b31e860"> 
+    <img width="39.2%" src="https://github.com/user-attachments/assets/1bc00b78-3050-4329-a1c2-cfdf5b6553ab"> 
+    <img width="40.5%" src="https://github.com/user-attachments/assets/a0e9d5a4-c1d9-4023-a12b-6d2a87a79eb9"> 
+</p>
