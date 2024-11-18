@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitHub - Your Workout Plan</title>
+    <link rel="stylesheet" href="../../common/assets/stylesheets/plan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <div class="overlay">
+            <header>
+              <img src="../../common/assets/pics/logo.png" alt="FitHub Logo" class="logo">
+              <h1 class="welcome-message">Your Workout Plan</h1>
+              <a href="logout.php"><img src="../../common/assets/pics/logout-icon.jpg" alt="Logout" class="logout-text"></a>
+            </header>
+            
+            <div class="content-box">
+                <table class="plan-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody id="plan-table-body">
+                        <tr>
+                            <th>Morning</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Afternoon</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Evening</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="action-buttons">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+                <button class="add-btn">Add</button>
+            </div>
+            
+            
+            <div class="dialog-box" id="dialog-box">
+                <h2>Add/Edit Workout Plan</h2>
+                <form id="workout-form">
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <input type="text" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="monday">Monday:</label>
+                        <input type="text" id="monday" name="monday">
+                    </div>
+                    <div class="form-group">
+                        <label for="tuesday">Tuesday:</label>
+                        <input type="text" id="tuesday" name="tuesday">
+                    </div>
+                    <div class="form-group">
+                        <label for="wednesday">Wednesday:</label>
+                        <input type="text" id="wednesday" name="wednesday">
+                    </div>
+                    <div class="form-group">
+                        <label for="thursday">Thursday:</label>
+                        <input type="text" id="thursday" name="thursday">
+                    </div>
+                    <div class="form-group">
+                        <label for="friday">Friday:</label>
+                        <input type="text" id="friday" name="friday">
+                    </div>
+                    <div class="form-group">
+                        <label for="saturday">Saturday:</label>
+                        <input type="text" id="saturday" name="saturday">
+                    </div>
+                    <div class="form-group">
+                        <label for="sunday">Sunday:</label>
+                        <input type="text" id="sunday" name="sunday">
+                    </div>
+                    <button type="submit" class="submit-btn">Save Plan</button>
+                    <button type="button" class="close-btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementsByClassName('add-btn')[0].addEventListener('click', function() {
+            document.getElementById('dialog-box').style.display = 'block';
+        });
+
+        document.getElementsByClassName('close-btn')[0].addEventListener('click', function() {
+            document.getElementById('dialog-box').style.display = 'none';
+        });
+
+        document.getElementById('workout-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const time = document.getElementById('time').value;
+            const monday = document.getElementById('monday').value;
+            const tuesday = document.getElementById('tuesday').value;
+            const wednesday = document.getElementById('wednesday').value;
+            const thursday = document.getElementById('thursday').value;
+            const friday = document.getElementById('friday').value;
+            const saturday = document.getElementById('saturday').value;
+            const sunday = document.getElementById('sunday').value;
+
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${time}</td>
+                <td>${monday}</td>
+                <td>${tuesday}</td>
+                <td>${wednesday}</td>
+                <td>${thursday}</td>
+                <td>${friday}</td>
+                <td>${saturday}</td>
+                <td>${sunday}</td>
+            `;
+
+            document.getElementById('plan-table-body').appendChild(newRow);
+
+            // Clear the form
+            document.getElementById('workout-form').reset();
+            document.getElementById('dialog-box').style.display = 'none';
+        });
+
+        document.querySelector('.action-buttons').addEventListener('click', function(event) {
+            if (event.target.classList.contains('delete-btn')) {
+                const rows = document.querySelectorAll('#plan-table-body tr');
+                if (rows.length > 0) {
+                    rows[rows.length - 1].remove();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
