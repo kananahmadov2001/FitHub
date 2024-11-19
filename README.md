@@ -6,7 +6,7 @@
 FitHub is a fitness management website where users can explore targeted workout plans for specific body areas, create personal accounts, log in, register, and design their weekly workout routines.
 
 ## Homepage
-[FitHub Homepage](http://ec2-18-117-107-39.us-east-2.compute.amazonaws.com/~Gokuf/M7/orig-fithub/client/public/login.php)
+Homepage: [FitHub Homepage](http://ec2-18-117-107-39.us-east-2.compute.amazonaws.com/~Gokuf/M7/orig-fithub/client/public/login.php)
 
 ## Login Details
 Use the following login credentials:
