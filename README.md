@@ -38,7 +38,7 @@ Alternatively, you can create your own user by entering a username and password 
     - Copying selected workout plans to another user's account.
     - Removing any existing plans for the target user before sharing.
 
-Here is the more in-depth analysis of 'Challenge' feature and steps in the `challenge.php`:
+Here is the more in-depth analysis of 'Challenge' feature and steps:
 * "Challenge" feature allows users to track their fitness activities and progress in a gamified manner. Users can select different workout types, specify the duration of each workout, and accumulate points based on their activities. The goal is to reach a specified number of points (60 points in this case), encouraging users to stay active. For this feature, I utilized a combination of PHP for backend processing and JavaScript for dynamic frontend updates. I also used sessions for tracking progress, AJAX for seamless updates, and visual feedback through a progress bar and congratulatory messages and effects enhances the user experience, making it both interactive and motivating. 
 * Session Management and Initialization.
 * User Identification: checking the username stored in the session. If no username is available, it defaults to 'Guest'.  
@@ -48,7 +48,7 @@ Here is the more in-depth analysis of 'Challenge' feature and steps in the `chal
 * JavaScript for Dynamic Updates: updating the progress and points display, and showing the congratulatory message. The fetch API is used for AJAX requests, ensuring the page does not reload upon submission or reset.
 * Confetti Effect: implemented using JavaScript and CSS. It involves dynamically creating and animating confetti elements on the screen when the user reaches the target points.
 
-Here is the more in-depth analysis of 'Sharing Workout Plans' feature and steps in the `challenge.php`:
+Here is the more in-depth analysis of 'Sharing Workout Plans' feature and steps:
 Form Handling: When a POST request is made with the action set to 'share', the script processes the request to share the current user's workout plans with another user.
 * Fetching the Target User: The target user, referred to as sharedWith, is retrieved from the incoming request data ($input['shared_with']).
 * Deleting Existing Plans: Before sharing the plans, the script deletes any existing plans that the target user ($sharedWith) might have.
